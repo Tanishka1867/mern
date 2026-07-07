@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tanishka Patil | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Tanishka Patil</h1>
+        <p>Web Developer</p>
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+
+    <main>
+      <section id="home" class="section hero">
+        <div class="container">
+          <h2>Welcome to My Portfolio</h2>
+          <p>Hi, I'm Tanishka Patil, a web developer passionate about creating intuitive and engaging user experiences.</p>
+          <p class="cta"><a href="#projects" class="btn">See my projects</a></p>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <h3>Skills</h3>
+          <ol class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript / ES6+</li>
+            <li>React</li>
+            <li>Node.js / Express</li>
+            <li>Flutter</li>
+            <li>Firebase</li>
+            <li>Git & GitHub</li>
+            <li>MongoDB</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h3>About Me</h3>
+          <p>I am a computer science student and aspiring software engineer. My interests include Web Development, Mobile App Development, Cloud Computing, and Artificial Intelligence. Currently learning advanced Full Stack Development and building real-world projects to strengthen my development skills. I am passionate about creating innovative solutions and continuously improving my technical abilities.</p>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h3>Projects</h3>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h4>MedSense AI</h4>
+              <p>AI-powered healthcare application for analysing medicines for ordinary people without using jargon.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h3>Contact</h3>
+          <p>If you'd like to get in touch, send a short message below.</p>
+          <form id="contactForm" class="contact-form">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn">Send</button>
+            </div>
+            <p id="formResult" class="form-result" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Your Name — Built with a simple static site.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
