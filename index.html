@@ -5,101 +5,299 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Tanishka Patil | Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <!-- Lucide Icons (v0.244.0 to preserve brand icons like GitHub & LinkedIn) -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.244.0/dist/umd/lucide.min.js"></script>
+    <meta name="description" content="Tanishka Patil is a computer science student and passionate web developer building high-quality, modern, and engaging digital solutions." />
   </head>
   <body>
+    <!-- Toast Notifications Container -->
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
     <header class="site-header">
       <div class="container header-inner">
-        <h1 class="logo">Tanishka Patil</h1>
-        <p>Web Developer</p>
-        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <nav id="mainNav" class="main-nav" aria-label="Main navigation">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="logo-container">
+          <img src="avatar.jpg" alt="Tanishka Patil Avatar" class="header-avatar">
+          <div class="logo-info">
+            <h1 class="logo">Tanishka Patil</h1>
+            <span class="logo-subtitle">Web Developer</span>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+            <ul>
+              <li><a href="#home" class="nav-link active">Home</a></li>
+              <li><a href="#skills" class="nav-link">Skills</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+          <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <i data-lucide="sun" id="themeIcon"></i>
+          </button>
+          <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+            <i data-lucide="menu" id="menuIcon"></i>
+          </button>
+        </div>
       </div>
     </header>
 
-    <!-- Hero Section -->
-
     <main>
+      <!-- Hero Section -->
       <section id="home" class="section hero">
-        <div class="container">
-          <h2>Welcome to My Portfolio</h2>
-          <p>Hi, I'm Tanishka Patil, a web developer passionate about creating intuitive and engaging user experiences.</p>
-          <p class="cta"><a href="#projects" class="btn">See my projects</a></p>
-        </div>
-      </section>
-
-      <section id="skills" class="section">
-        <div class="container">
-          <h3>Skills</h3>
-          <ol class="skills-list">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript / ES6+</li>
-            <li>React</li>
-            <li>Node.js / Express</li>
-            <li>Flutter</li>
-            <li>Firebase</li>
-            <li>Git & GitHub</li>
-            <li>MongoDB</li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <h3>About Me</h3>
-          <p>I am a computer science student and aspiring software engineer. My interests include Web Development, Mobile App Development, Cloud Computing, and Artificial Intelligence. Currently learning advanced Full Stack Development and building real-world projects to strengthen my development skills. I am passionate about creating innovative solutions and continuously improving my technical abilities.</p>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <div class="container">
-          <h3>Projects</h3>
-          <div class="projects-grid">
-            <article class="project-card">
-              <h4>MedSense AI</h4>
-              <p>AI-powered healthcare application for analysing medicines for ordinary people without using jargon.</p>
-            </article>
+        <div class="container hero-inner reveal">
+          <div class="hero-badge">
+            <span class="badge-dot"></span> Available for Opportunities
+          </div>
+          <div class="hero-avatar-container">
+            <div class="hero-avatar-glow"></div>
+            <img src="avatar.jpg" alt="Tanishka Patil Headshot" class="hero-avatar">
+          </div>
+          <h1>Designing digital experiences that matter</h1>
+          <p class="lead">Hi, I'm Tanishka Patil. A computer science student and passionate web developer specialized in building modern, responsive, and high-performance applications.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              Explore Work <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
           </div>
         </div>
       </section>
 
+      <!-- Skills Section -->
+      <section id="skills" class="section">
+        <div class="container">
+          <h2 class="reveal">My Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-card reveal reveal-delay-1">
+              <div class="skill-icon-wrapper"><i data-lucide="code"></i></div>
+              <div class="skill-info">
+                <h4>HTML5 & CSS3</h4>
+                <p>Semantic layout markup, responsive structures, flexbox, CSS Grid, and custom variables.</p>
+              </div>
+            </div>
+            
+            <div class="skill-card reveal reveal-delay-2">
+              <div class="skill-icon-wrapper"><i data-lucide="braces"></i></div>
+              <div class="skill-info">
+                <h4>JavaScript / ES6+</h4>
+                <p>Asynchronous control flows, DOM manipulation, storage integrations, and modern clean logic.</p>
+              </div>
+            </div>
+
+            <div class="skill-card reveal reveal-delay-3">
+              <div class="skill-icon-wrapper"><i data-lucide="cpu"></i></div>
+              <div class="skill-info">
+                <h4>React</h4>
+                <p>Component architecture, state management hooks, dynamic renders, and routing layouts.</p>
+              </div>
+            </div>
+
+            <div class="skill-card reveal reveal-delay-4">
+              <div class="skill-icon-wrapper"><i data-lucide="server"></i></div>
+              <div class="skill-info">
+                <h4>Node.js / Express</h4>
+                <p>RESTful API architectures, middleware pipelines, authentication schemes, and server utilities.</p>
+              </div>
+            </div>
+
+            <div class="skill-card reveal reveal-delay-1">
+              <div class="skill-icon-wrapper"><i data-lucide="smartphone"></i></div>
+              <div class="skill-info">
+                <h4>Flutter</h4>
+                <p>Cross-platform mobile applications, stateful widget composition, and fast native rendering.</p>
+              </div>
+            </div>
+
+            <div class="skill-card reveal reveal-delay-2">
+              <div class="skill-icon-wrapper"><i data-lucide="flame"></i></div>
+              <div class="skill-info">
+                <h4>Firebase</h4>
+                <p>Cloud Firestore real-time databases, user authentication services, and serverless hosting.</p>
+              </div>
+            </div>
+
+            <div class="skill-card reveal reveal-delay-3">
+              <div class="skill-icon-wrapper"><i data-lucide="git-branch"></i></div>
+              <div class="skill-info">
+                <h4>Git & GitHub</h4>
+                <p>Distributed version control, branching strategies, code reviews, and remote repositories.</p>
+              </div>
+            </div>
+
+            <div class="skill-card reveal reveal-delay-4">
+              <div class="skill-icon-wrapper"><i data-lucide="database"></i></div>
+              <div class="skill-info">
+                <h4>MongoDB</h4>
+                <p>NoSQL document data modeling, index optimization, aggregation filters, and schema design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section">
+        <div class="container">
+          <h2 class="reveal">About Me</h2>
+          <div class="about-grid">
+            <div class="about-text reveal reveal-delay-1">
+              <h3>Building the future of the web</h3>
+              <p>I am a computer science student and aspiring software engineer. My interests include Web Development, Mobile App Development, Cloud Computing, and Artificial Intelligence.</p>
+              <p>Currently learning advanced Full Stack Development and building real-world projects to strengthen my development skills. I am passionate about creating innovative solutions and continuously improving my technical abilities.</p>
+            </div>
+            <div class="about-stats reveal reveal-delay-2">
+              <div class="stat-card">
+                <div class="stat-num">9+</div>
+                <div class="stat-label">Core Skills</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">4+</div>
+                <div class="stat-label">Projects Built</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Commitment</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">A+</div>
+                <div class="stat-label">Adaptability</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section">
+        <div class="container">
+          <h2 class="reveal">Featured Work</h2>
+          <div class="projects-grid">
+            <div class="project-card reveal reveal-delay-1">
+              <div>
+                <div class="project-icon"><i data-lucide="activity"></i></div>
+                <h3>MedSense AI</h3>
+                <p>AI-powered healthcare application for analysing medicines for ordinary people without using jargon.</p>
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Node.js</span>
+                  <span class="project-tag">AI API</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <a href="#" class="project-link">View Project <i data-lucide="arrow-up-right"></i></a>
+              </div>
+            </div>
+
+            <div class="project-card reveal reveal-delay-2">
+              <div>
+                <div class="project-icon"><i data-lucide="check-square"></i></div>
+                <h3>Apex Tasker</h3>
+                <p>A premium task manager with drag-and-drop workflow optimization, real-time collaboration, and stats.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Express</span>
+                  <span class="project-tag">Socket.io</span>
+                  <span class="project-tag">MongoDB</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <a href="#" class="project-link">View Project <i data-lucide="arrow-up-right"></i></a>
+              </div>
+            </div>
+
+            <div class="project-card reveal reveal-delay-3">
+              <div>
+                <div class="project-icon"><i data-lucide="leaf"></i></div>
+                <h3>EcoSync</h3>
+                <p>IoT-enabled smart monitoring dashboard displaying environmental parameters and power usage grids.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Flutter</span>
+                  <span class="project-tag">Firebase</span>
+                  <span class="project-tag">Analytics</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <a href="#" class="project-link">View Project <i data-lucide="arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
       <section id="contact" class="section">
         <div class="container">
-          <h3>Contact</h3>
-          <p>If you'd like to get in touch, send a short message below.</p>
-          <form id="contactForm" class="contact-form">
-            <label>
-              Name
-              <input type="text" name="name" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" required />
-            </label>
-            <label>
-              Message
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-            <div class="form-actions">
-              <button type="submit" class="btn">Send</button>
+          <h2 class="reveal">Get In Touch</h2>
+          <div class="contact-container reveal reveal-delay-1">
+            <div class="contact-info-panel">
+              <div>
+                <h3>Contact Info</h3>
+                <p>Have an interesting project, job opportunity, or just want to say hi? Send me a message!</p>
+              </div>
+              <ul class="contact-details">
+                <li class="contact-item">
+                  <div class="contact-item-icon"><i data-lucide="mail"></i></div>
+                  <div class="contact-item-text">
+                    <a href="mailto:tanishkapatil.dev@gmail.com">tanishkapatil.dev@gmail.com</a>
+                  </div>
+                </li>
+                <li class="contact-item">
+                  <div class="contact-item-icon"><i data-lucide="map-pin"></i></div>
+                  <div class="contact-item-text">Maharashtra, India</div>
+                </li>
+                <li class="contact-item">
+                  <div class="contact-item-icon"><i data-lucide="clock"></i></div>
+                  <div class="contact-item-text">GMT +5:30 (IST)</div>
+                </li>
+              </ul>
+              <div class="footer-socials" style="margin-top: 2rem;">
+                <a href="https://github.com/Tanishka1867" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+              </div>
             </div>
-            <p id="formResult" class="form-result" aria-live="polite"></p>
-          </form>
+            
+            <div class="contact-form-panel">
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required />
+                  <span class="error-message">Name is required</span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                  <span class="error-message">Please enter a valid email address</span>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="4" placeholder="How can I help you?" required></textarea>
+                  <span class="error-message">Message cannot be empty</span>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">
+                    Send Message <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Your Name — Built with a simple static site.</p>
+      <div class="container footer-inner">
+        <span class="footer-logo">Tanishka Patil</span>
+        <div class="footer-socials">
+          <a href="https://github.com/Tanishka1867" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="mailto:tanishkapatil.dev@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+        </div>
+        <p>© <span id="year"></span> Tanishka Patil. Built with passion and clean code.</p>
       </div>
     </footer>
 
